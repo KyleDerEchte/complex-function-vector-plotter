@@ -5,7 +5,7 @@ import functions as fn
 
 
 def main():
-    data: dict[complex] = fn.cos_of_z(fn.of_range(-10 - 10j, 10 + 10j, 0.5))
+    data: dict[complex] = fn.z_squared(fn.of_range(-10 - 10j, 10 + 10j, 1))
     x: list[float] = []
     y: list[float] = []
     u: list[float] = []
