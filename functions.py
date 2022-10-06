@@ -1,4 +1,5 @@
 import cmath
+import math
 
 import numpy as np
 
@@ -8,6 +9,8 @@ def z_1(z: list[complex]) -> dict[complex, complex]:
     for c in z:
         try:
             result[c] = ((1 / 2) * c) - (3 / (5 - c))
+            if result[c] == 0:
+                print(f"Zero point at {c}")
         except:
             print(f"Defnition gap at {c}!")
             continue
@@ -73,6 +76,19 @@ def z_9(z: list[complex]) -> dict[complex, complex]:
         if c == 0:
             continue
         result[c] = (1 / c)
+    return result
+
+
+def z_10(z: list[complex]) -> dict[complex, complex]:
+    result = {}
+    for c in z:
+        try:
+            result[c] = ((c ** 3) / cmath.sqrt(c)) - 3j / (5j - c)
+            if result[c] == 0:
+                print(f"Zero point at {c}")
+        except:
+            print(f"Defnition gap at {c}!")
+            continue
     return result
 
 
