@@ -12,6 +12,7 @@ def z_1(z: list[complex]) -> dict[complex, complex]:
             if result[c] == 0:
                 print(f"Zero point at {c}")
         except:
+            result[c] = 0
             print(f"Defnition gap at {c}!")
             continue
     return result
@@ -87,6 +88,7 @@ def z_10(z: list[complex]) -> dict[complex, complex]:
             if result[c] == 0:
                 print(f"Zero point at {c}")
         except:
+            result[c] = 0
             print(f"Defnition gap at {c}!")
             continue
     return result
