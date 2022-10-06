@@ -33,6 +33,9 @@ def main():
     plt.quiver(x, y, u, v, color, cmap="jet")
     plt.colorbar()
     plt.grid()
+    plt.xlabel("Re")
+    plt.ylabel("Im")
+    plt.suptitle("complex function plotter by Kyle Kreuter")
     plt.show()
 
 
