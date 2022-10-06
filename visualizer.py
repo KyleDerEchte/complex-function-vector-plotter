@@ -4,8 +4,8 @@ import numpy as np
 import functions as fn
 
 
-def main():
-    data: dict[complex] = fn.z_1(fn.of_range(-10 - 10j, 10 + 10j, 1))
+def main(data: dict[complex]):
+    data: dict[complex] = data
     x: list[float] = []
     y: list[float] = []
     u: list[float] = []
@@ -40,4 +40,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(fn.z_3(fn.of_range(-10 - 10j, 10 + 10j, 1), 4))
