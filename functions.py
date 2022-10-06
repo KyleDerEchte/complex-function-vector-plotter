@@ -3,14 +3,25 @@ import cmath
 import numpy as np
 
 
-def z_squared(z: list[complex]) -> dict[complex, complex]:
+def z_1(z: list[complex]) -> dict[complex, complex]:
+    result = {}
+    for c in z:
+        try:
+            result[c] = ((1 / 2) * c) - (3 / (5 - c))
+        except:
+            print(f"Defnition gap at {c}!")
+            continue
+    return result
+
+
+def z_2(z: list[complex]) -> dict[complex, complex]:
     result = {}
     for c in z:
         result[c] = (c ** 2)
     return result
 
 
-def z_squared_x_div_x_times_z(z: list[complex], x: float) -> dict[complex, complex]:
+def z_3(z: list[complex], x: float) -> dict[complex, complex]:
     if x == 0:
         return 0
     result = {}
@@ -19,7 +30,7 @@ def z_squared_x_div_x_times_z(z: list[complex], x: float) -> dict[complex, compl
     return result
 
 
-def z_div_x(z: list[complex], x: float) -> dict[complex, complex]:
+def z_4(z: list[complex], x: float) -> dict[complex, complex]:
     if x == 0:
         return 0
     result = {}
@@ -28,35 +39,35 @@ def z_div_x(z: list[complex], x: float) -> dict[complex, complex]:
     return result
 
 
-def z_mul_x(z: list[complex], x: float) -> dict[complex, complex]:
+def z_5(z: list[complex], x: float) -> dict[complex, complex]:
     result = {}
     for c in z:
         result[c] = complex(c * x)
     return result
 
 
-def sin_of_z(z: list[complex]) -> dict[complex, complex]:
+def z_6(z: list[complex]) -> dict[complex, complex]:
     result = {}
     for c in z:
         result[c] = (cmath.sin(c))
     return result
 
 
-def cos_of_z(z: list[complex]) -> dict[complex, complex]:
+def z_7(z: list[complex]) -> dict[complex, complex]:
     result = {}
     for c in z:
         result[c] = (cmath.cos(c))
     return result
 
 
-def tan_of_z(z: list[complex]) -> dict[complex, complex]:
+def z_8(z: list[complex]) -> dict[complex, complex]:
     result = {}
     for c in z:
         result[c] = (cmath.tan(c))
     return result
 
 
-def one_div_z(z: list[complex]) -> dict[complex, complex]:
+def z_9(z: list[complex]) -> dict[complex, complex]:
     result = {}
     for c in z:
         if c == 0:
