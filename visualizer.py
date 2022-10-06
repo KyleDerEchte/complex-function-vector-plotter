@@ -19,8 +19,8 @@ def main():
 
         n = np.sqrt(u_to_insert ** 2 + v_to_insert ** 2)
         if n != 0:
-            u_to_insert = u_to_insert / n * 0.2
-            v_to_insert = v_to_insert / n * 0.2
+            u_to_insert = u_to_insert / n * 0.5
+            v_to_insert = v_to_insert / n * 0.5
 
         x.append(x_to_insert)
         y.append(y_to_insert)
@@ -29,7 +29,7 @@ def main():
 
     color = []
     for i in range(len(x)):
-        div = x[i] ** 2 + y[i] ** 2
+        div = np.sqrt(x[i] ** 2 + y[i] ** 2)
         color.append(div)
     print(f"Generated {len(x)} vectors.")
     plt.quiver(x, y, u, v, color, cmap="jet")
