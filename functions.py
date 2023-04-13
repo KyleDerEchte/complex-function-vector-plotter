@@ -12,55 +12,37 @@ def z_1(z: list[complex]) -> dict[complex, complex]:
                 print(f"Zero point at {c}")
         except:
             result[c] = 0
-            print(f"Defnition gap at {c}!")
+            print(f"Definition gap at {c}!")
             continue
     return result
 
 
 def z_2(z: list[complex]) -> dict[complex, complex]:
-    result = {}
-    for c in z:
-        result[c] = (c ** 2)
-    return result
+    return {c: c ** 2 for c in z}
 
 
-def z_3(z: list[complex], x: float) -> dict[complex, complex]:
+def z_3(z: list[complex], x: float) -> int | dict[complex, complex]:
     if x == 0:
         return 0
-    result = {}
-    for c in z:
-        result[c] = ((c ** x) / x * c)
-    return result
+    return {c: (c ** x) / x * c for c in z}
 
 
-def z_4(z: list[complex], x: float) -> dict[complex, complex]:
+def z_4(z: list[complex], x: float) -> int | dict[complex, complex]:
     if x == 0:
         return 0
-    result = {}
-    for c in z:
-        result[c] = (c / x)
-    return result
+    return {c: c / x for c in z}
 
 
 def z_5(z: list[complex], x: float) -> dict[complex, complex]:
-    result = {}
-    for c in z:
-        result[c] = complex(c * x)
-    return result
+    return {c: complex(c * x) for c in z}
 
 
 def z_6(z: list[complex]) -> dict[complex, complex]:
-    result = {}
-    for c in z:
-        result[c] = (cmath.sin(c))
-    return result
+    return {c: cmath.sin(c) for c in z}
 
 
 def z_7(z: list[complex]) -> dict[complex, complex]:
-    result = {}
-    for c in z:
-        result[c] = (cmath.cos(c))
-    return result
+    return {c: cmath.cos(c) for c in z}
 
 
 def z_8(z: list[complex]) -> dict[complex, complex]:
@@ -71,12 +53,7 @@ def z_8(z: list[complex]) -> dict[complex, complex]:
 
 
 def z_9(z: list[complex]) -> dict[complex, complex]:
-    result = {}
-    for c in z:
-        if c == 0:
-            continue
-        result[c] = (1 / c)
-    return result
+    return {c: 1 / c for c in z if c != 0}
 
 
 def z_10(z: list[complex]) -> dict[complex, complex]:
@@ -88,7 +65,7 @@ def z_10(z: list[complex]) -> dict[complex, complex]:
                 print(f"Zero point at {c}")
         except:
             result[c] = 0
-            print(f"Defnition gap at {c}!")
+            print(f"Definition gap at {c}!")
             continue
     return result
 
